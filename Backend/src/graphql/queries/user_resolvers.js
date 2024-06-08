@@ -13,7 +13,7 @@ const resolvers = {
 
         user: async (_, { id }) => {
             try {
-                const user = await User.findOne({ id })
+                const user = await User.findById(id)
                 return user
             } catch (err) {
                 throw new Error(err)

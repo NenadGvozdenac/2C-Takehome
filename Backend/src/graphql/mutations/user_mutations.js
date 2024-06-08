@@ -23,7 +23,7 @@ const mutations = {
 
         deleteUser: async (_, { id }) => {
             try {
-                const user = await User.findOne({ id })
+                const user = await User.findById(id)
                 if (!user) {
                     throw new Error('User not found')
                 }
